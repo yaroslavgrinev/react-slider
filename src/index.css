@@ -1,0 +1,65 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.slider {
+  position: relative;
+  max-width: 500px;
+  width: 100vw;
+  margin: 0 auto;
+  height: 60vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {  
+  cursor: pointer;
+  transition: transform ease-in .1s;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.back {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.fa-arrow-right:before, .fa-arrow-left:before {
+  color: #222
+}
