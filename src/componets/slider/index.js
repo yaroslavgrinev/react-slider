@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Arrow from '../arrow'
 import Slide from '../slide'
 import images from '../../images.json'
+import Description from '../description';
 
 class _Slider extends Component {
   constructor(props){
@@ -34,15 +35,20 @@ class _Slider extends Component {
     }));
   }
   slideWidth = () => {
-    return document.querySelector('.slide').clientWidth
+    const element = document.querySelector('.slide')
+    const style = element.currentStyle || window.getComputedStyle(element);    
+    return element.clientWidth + parseFloat(style.marginLeft, 10) + parseFloat(style.marginRight, 10)
   }
 
-  render() {    
-    return (      
+  render() {       
+    const {translateValue, currentIndex} = this.state;
+    return (  
+      <>    
         <div className="slider">
+          <h1 className="title">Our Team</h1>
           <div className="slider-wrapper"
             style={{
-              transform: `translateX(${this.state.translateValue}px)`,
+              transform: `translateX(${translateValue}px)`,
               transition: 'transform ease-out 0.45s'
             }}>
               {
@@ -62,6 +68,11 @@ class _Slider extends Component {
              <i className="fas fa-chevron-right"></i>
           </Arrow>           
         </div>
+        {
+            images[currentIndex] && 
+            <Description data={images[currentIndex]}/>
+          }
+      </>
       );
     
   }
