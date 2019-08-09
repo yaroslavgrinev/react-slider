@@ -151,3 +151,31 @@ code {
     left: 95%;
   }
 } 
+@media (max-width: 768px) 
+{ 
+  .slide {
+    margin: 0px 48px;
+    max-width: 98vw;
+  }   
+} 
+@media (max-width: 414px) 
+{ 
+  .slide {
+    margin: 0px 2.16%;
+    max-width: 98vw;
+  }   
+} 
+@media (max-width: 375px) 
+{ 
+  .slide {
+    margin: 0px 98px;
+    max-width: 98vw;
+  }   
+} 
+@media (max-width: 320px) 
+{ 
+  .slide {
+    margin: 0px 84px;
+    max-width: 98vw;
+  }   
+} 
