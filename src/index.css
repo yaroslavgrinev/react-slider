@@ -13,7 +13,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.app{
+  background-color: #35464f;
+  width: 100%;
+  height: 100vh;
+}
 .slider {
   position: relative;
   max-width: 500px;
